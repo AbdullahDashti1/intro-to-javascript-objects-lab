@@ -68,7 +68,7 @@ game.party = [];
 let count = 0;
 
 for (let w = 0; w < pokemon.length; w++) {
-  if (pokemon[w].hp < 60) {
+  if (pokemon[w].starter !== true && pokemon[w].hp > 60) {
     game.party.push(pokemon[w]);
     count++;
   }
@@ -190,8 +190,6 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 10 here:
 */
 console.log('\nExercise 10');
-
-game.party = [];
 
 game.catchPokemon = function (pokemonObj) {
   game.party.push(pokemonObj);
